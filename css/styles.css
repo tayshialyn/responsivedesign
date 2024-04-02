@@ -346,6 +346,7 @@ only screen and (max-width:48em) {
 .footer-list {
 	list-style: none;
 	display: flex;
+}
 
 	/* set each footer item (terms, privacy) with a margin of 1.6rem, except the last footer item */
 	.footer-item:not(:last-child) {
