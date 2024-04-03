@@ -360,6 +360,8 @@ only screen and (max-width:48em) {
 	grid-template-rows: repeat(3, 1fr);
 	row-gap: 3px;
 	margin-top: 2rem;
+	padding: 2rem 0rem;
+	margin-top: auto;
 }
 
 .info-block {
@@ -440,10 +442,10 @@ only screen and (max-width:48em) {
 /* :::: START OF LEARNING :::: */
 
 /* --- DESKTOP SECTION --- */
- 
+
 .learning {
-	/* background-color: rgba (231, 232, 233) */
-	background-color: #f0f0f0c2;
+	background-color: rgba(231, 232, 233, 0.788);
+	/* background-color: #f0f0f0c2; */
 	padding-bottom: 2rem;
 	grid-column: full--start / full--end;
 }
@@ -453,8 +455,6 @@ only screen and (max-width:48em) {
 	font-size: 2.4rem;
 	font-weight: 700;
 	padding: 2rem 0rem;
-	/* margin-top: 2rem;
-	margin-bottom: 2rem; */
 	text-align: center;
 }
 
@@ -480,9 +480,6 @@ only screen and (max-width:48em) {
 	height: auto;
 }
 
-.:not(:last-child)
-
-
 /* --- MOBILE SECTION --- */
 
 
@@ -493,20 +490,87 @@ only screen and (max-width:48em) {
 
 /* :::: START OF THESIS:::: */
 
-.thesistitle h3 {
-	background-color: #f0f0f0;
-	padding: 2rem 1.5rem;
-	display: grid;
-	grid-template-columns: full--start / full--end;
-	align-items: center;
-	font-size: 10rem;
-}
-
-
-
 /* --- DESKTOP SECTION --- */
 
+#thesistitle {
+	background-color: #f0f0f0;
+	padding: 2rem 2rem;
+	display: grid;
+	grid-column: full--start / full--end;
+	justify-content: center;
+	font-size: 2.4rem;
+	font-weight: 700;
+	margin-top; auto;
+}
 
+.thesis {
+	display: grid;
+	grid-column: full--start / full--end;
+	grid-template-columns: 0.6fr 0.4fr;
+}
+
+.urban {
+	background-color: #f0f0f0;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.urban video {
+	width: 100%;
+	height: auto;
+}
+
+.urban h3 {
+	font-size: 2.4rem;
+	font-weight: 700;
+	padding: 2rem 0rem;
+}
+
+.thesis-text {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+
+.exhibit {
+	background-color: #f0f0f0;
+	/* border-left: 1px solid #e7e7ef; */
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	row-gap: 3px;
+	padding: 2rem 0rem;
+}
+
+.exhibit-block {
+	/* padding-left: 2rem;
+	padding-right: 1rem; */
+	/* padding: 2rem 1rem 1rem; */
+	display: grid;
+	grid-template-columns: 0.35fr 0.65fr;
+	column-gap: 5%;
+	/* border-bottom: 1px solid #e7e7ef;
+	border-top: 1px solid #e7e7ef; */
+	align-items: center;
+}
+
+.exhibit-block:first-child {
+	background-color: #d7d7d7;
+}
+
+.exhibit-block img {
+	width: 100%;
+	padding: 1em;
+}
+
+.exhibit-block h4 {
+	color: #303646;
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.exhibit-block p {
+	font-size: 1.3rem;
+}
 
 /* --- MOBILE SECTION --- */
 
@@ -519,7 +583,8 @@ only screen and (max-width:48em) {
 /* :::: START OF FOOTER :::: */
 
 /* --- DESKTOP SECTION --- */
-.footer {
+
+#footer {
 	display: flex;
 	font-size: 1.2rem;
 	background-color: #f0f0f0;
@@ -536,7 +601,7 @@ only screen and (max-width:48em) {
 /* set the terms and privacy list into a single row (using flex) */
 .footer-list {
 	list-style: none;
-	display: flex;
+	display: inline-flex;
 }
 
 /* set each footer item (terms, privacy) with a margin of 1.6rem, except the last footer item */
