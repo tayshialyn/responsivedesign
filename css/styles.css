@@ -432,9 +432,13 @@ only screen and (max-width:48em) {
 	.info-block {
 		grid-template-columns: 1fr;
 		padding: 2rem;
+		border: none;
+	}
+
+	.info-block:last-child {
+		background-color: #f0f0f0;
 	}
 }
-
 
 /* :::: END OF PRACTICE :::: */
 
@@ -444,14 +448,13 @@ only screen and (max-width:48em) {
 /* --- DESKTOP SECTION --- */
 
 .learning {
-	background-color: rgba(231, 232, 233, 0.788);
-	/* background-color: #f0f0f0c2; */
-	padding-bottom: 2rem;
+	background-color: #f0f0f0;
+	/* padding-bottom: 1rem; */
 	grid-column: full--start / full--end;
 }
 
 .learning h3 {
-	background-color: #f0f0f0c2;
+	background-color: #f0f0f0;
 	font-size: 2.4rem;
 	font-weight: 700;
 	padding: 2rem 0rem;
@@ -459,7 +462,7 @@ only screen and (max-width:48em) {
 }
 
 .topics {
-	background-color: #f0f0f0c2;
+	background-color: #f0f0f0;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	row-gap: 2rem;
@@ -470,7 +473,7 @@ only screen and (max-width:48em) {
 }
 
 .topics-block {
-	background-color: #f0f0f0c2;
+	background-color: #f0f0f0;
 	font-size: 1.5rem;
 	padding-bottom: 24px;
 }
@@ -480,9 +483,62 @@ only screen and (max-width:48em) {
 	height: auto;
 }
 
+.topics-block h4 {
+	color: #303646;
+	font-size: 2rem;
+	font-weight: 700;
+	margin-top: 1rem;
+	margin-left: 1rem;
+}
+
+.topics-block h5 {
+	color: #303646;
+	font-size: 1.3rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	margin-left: 1rem;
+}
+
+.topics-block p {
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}
+
 /* --- MOBILE SECTION --- */
 
+/* By default (desktop version), .topics-mobile should be hidden */
 
+.topics-mobile {
+	display: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+
+	.topics {
+		display: none;
+	}
+
+	.topics-mobile {
+		background-color: #f0f0f0;
+		display: grid;
+		grid-column: full--start / full--end;
+		padding-bottom: 1.5rem;
+	}
+
+	.topics-mobile .topic-name {
+		display: grid;
+		font-size: 2rem;
+		font-weight: 700;
+		text-align: center;
+		background-color: #d7d7d7;
+		grid-template-columns: 1fr;
+		padding: 2rem;
+		margin-left: 2rem;
+		margin-right: 2rem;
+		margin-bottom: 0.5rem;
+	}
+}
 
 /* :::: END OF LEARNING :::: */
 
@@ -492,7 +548,7 @@ only screen and (max-width:48em) {
 
 /* --- DESKTOP SECTION --- */
 
-#thesistitle {
+.thesistitle {
 	background-color: #f0f0f0;
 	padding: 2rem 2rem;
 	display: grid;
@@ -500,7 +556,6 @@ only screen and (max-width:48em) {
 	justify-content: center;
 	font-size: 2.4rem;
 	font-weight: 700;
-	margin-top; auto;
 }
 
 .thesis {
@@ -541,14 +596,9 @@ only screen and (max-width:48em) {
 }
 
 .exhibit-block {
-	/* padding-left: 2rem;
-	padding-right: 1rem; */
-	/* padding: 2rem 1rem 1rem; */
 	display: grid;
 	grid-template-columns: 0.35fr 0.65fr;
 	column-gap: 5%;
-	/* border-bottom: 1px solid #e7e7ef;
-	border-top: 1px solid #e7e7ef; */
 	align-items: center;
 }
 
@@ -574,7 +624,33 @@ only screen and (max-width:48em) {
 
 /* --- MOBILE SECTION --- */
 
+@media only screen and (max-width: 37.5em) {
+	.thesistitle {
+		border-top: 1px solid #e7e7ef;
+	}
 
+	.urban h3 {
+		display: none;
+	}
+
+	.urban p {
+		display: none;
+	}
+
+	.exhibit {
+		display: none;
+	}
+
+	.thesis {
+		display: flex;
+		grid-column: full--start / full--end;
+		grid-template-rows: 1fr;
+	}
+
+	.thesis video {
+		padding-bottom: 1.5rem;
+	}
+}
 
 /* :::: END OF THESIS :::: */
 
@@ -584,7 +660,7 @@ only screen and (max-width:48em) {
 
 /* --- DESKTOP SECTION --- */
 
-#footer {
+.footer {
 	display: flex;
 	font-size: 1.2rem;
 	background-color: #f0f0f0;
@@ -601,7 +677,7 @@ only screen and (max-width:48em) {
 /* set the terms and privacy list into a single row (using flex) */
 .footer-list {
 	list-style: none;
-	display: inline-flex;
+	display: flex;
 }
 
 /* set each footer item (terms, privacy) with a margin of 1.6rem, except the last footer item */
@@ -626,12 +702,14 @@ only screen and (max-width:48em) {
 
 @media only screen and (max-width: 37.5em) {
 	.footer-list {
-		display: none
+		display: none;
+	}
+
+	.footer-copyright {
+		margin: auto;
 	}
 }
 
-.footer-copyright {
-	margin: auto;
-}
+
 
 /* :::: END OF FOOTER :::: */
